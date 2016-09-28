@@ -1,0 +1,14 @@
+<h1>Ember</h1>
+{{#each model as |post|}}
+  <p>score: {{post.data.score}}</p>
+  <p>title: {{post.data.url}}</p>
+  <p>commentCount: {{post.data.num_comments}}</p>
+  {{#if post.data.archived}}
+    <p>Archived.</p>
+  {{else}}
+    <p>Not Archived.</p>
+  {{/if}}
+
+  <hr>
+
+{{/each}}
